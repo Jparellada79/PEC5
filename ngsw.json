@@ -1,0 +1,98 @@
+{
+  "configVersion": 1,
+  "timestamp": 1704891621046,
+  "index": "/PEC5/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/PEC5/index.html",
+        "/PEC5/main.6531dedaac218d29.js",
+        "/PEC5/manifest.webmanifest",
+        "/PEC5/polyfills.8111e317140204d5.js",
+        "/PEC5/runtime.bc07acc36b18d3ff.js",
+        "/PEC5/styles.cf713e9244479a35.css"
+      ],
+      "patterns": [
+        "https:\\/\\/cdn\\.jsdelivr\\.net\\/npm\\/bootstrap@5\\.0\\.2\\/dist\\/css\\/bootstrap\\.min\\.css"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/PEC5/assets/css/animate.css",
+        "/PEC5/assets/icons/icon-128x128.png",
+        "/PEC5/assets/icons/icon-144x144.png",
+        "/PEC5/assets/icons/icon-152x152.png",
+        "/PEC5/assets/icons/icon-192x192.png",
+        "/PEC5/assets/icons/icon-384x384.png",
+        "/PEC5/assets/icons/icon-512x512.png",
+        "/PEC5/assets/icons/icon-72x72.png",
+        "/PEC5/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "images-api",
+      "patterns": [
+        "http:\\/\\/gateway\\.marvel\\.com\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": 3600000,
+      "timeoutMs": 1000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/PEC5/assets/css/animate.css": "1a1f22a40beae7a4bf83ff81f7c6b8be7cfd7e59",
+    "/PEC5/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/PEC5/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/PEC5/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/PEC5/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/PEC5/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/PEC5/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/PEC5/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/PEC5/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/PEC5/index.html": "6b8f71ea6e5b62517ace0414317d2c0190041114",
+    "/PEC5/main.6531dedaac218d29.js": "19409da5cf38b2a60fdae4c0df3762419386e140",
+    "/PEC5/manifest.webmanifest": "2969d54c362e4a1fb5fc429e0ff6ea2d75eaae13",
+    "/PEC5/polyfills.8111e317140204d5.js": "0ccd9ded9345c0af923cf73e07e056c34e6a462b",
+    "/PEC5/runtime.bc07acc36b18d3ff.js": "e5af4641ca9d1dd97f81b956e619504a3603d517",
+    "/PEC5/styles.cf713e9244479a35.css": "a5ffa5c39ed2e32a4c8bf8cbe48f2d31bb3914d8"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
