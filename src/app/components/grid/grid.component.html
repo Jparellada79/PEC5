@@ -1,0 +1,42 @@
+<div class="container m-4">
+  <div class="row">
+    <div class="col-6">
+      <div class="animate__bounceIn" >
+        <h1>TABLA CÓMICS</h1>
+      </div>
+    <table mat-table [dataSource]="dataSourceImages" class="mat-elevation-z8 m-0 p-0">
+      <ng-container matColumnDef="foto">
+        <th class="bg-Secondary" mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element" class="foto-celda">
+          <img width="50" height="50" [src]="element.download_url" alt="" />
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef ></th>
+        <td mat-cell *matCellDef="let element" >
+          <h5 style="margin: 0">{{ element.id }}</h5>       
+        </td>
+      </ng-container> 
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef ></th>
+        <td mat-cell *matCellDef="let element">
+          <h5 style="margin: 0">{{ element.title }}</h5>       
+        </td>
+      </ng-container>     
+      <ng-container matColumnDef="detalles">
+        <th mat-header-cell *matHeaderCellDef class="bg-primary text-white font-weight-light p-2 text-center">
+          <h5>Detalle</h5>
+        </th>
+        <td mat-cell *matCellDef="let element" class="">
+          <button type="button" class="btn btn-primary m-1" (click)="abrirDetalles(element)">
+            Detalles
+          </button>        
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" style="display: none"></tr>
+      <tr id="fila" mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>
+</div>

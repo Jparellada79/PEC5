@@ -1,0 +1,14 @@
+
+<div *ngIf="isLoading" class="spinner-container">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+<div class="row">
+<div class=" col-8 position-fixed top-0 end-0 p-3">
+<button class="bg-primary"(click)="verGrid()">Ver Grid</button>
+<button class="bg-secondary"(click)="verCard()">Ver Card</button>
+</div>
+</div>
+<app-grid *ngIf="verGrid_" [comics]="comics"></app-grid>
+<div>
+<app-card *ngIf="verCard_" [comics]="comics" (cardClick)="abrirDetalles($event)"></app-card>
+</div>

@@ -1,0 +1,39 @@
+<div *ngIf="isLoading" class="spinner-container">
+  <mat-spinner diameter="50"></mat-spinner>
+</div>
+
+<div class="row d-flex justify-content-center align-items-center">
+  <div class="col-8">
+    <div class="row">
+      <div class="col-10 mt-10">
+        <h2  *ngIf="isLoading===false">{{comic[0].title}}</h2>
+        <button  mat-button (click)="showDetails = !showDetails">
+          {{ showDetails ? 'Hide Details' : 'Show All Details' }}
+        </button> 
+        <mat-expansion-panel *ngIf="showDetails">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Details
+            </mat-panel-title>
+          </mat-expansion-panel-header>   
+          <mat-panel-description>
+          <ul class="list-group">
+              <li class="list-group-item">  Published: {{ comic[0].dates[0].date|date }} </li>
+              <li class="list-group-item" *ngIf="comic[0].textObjects.length > 0 ">Description: {{ comic[0].textObjects[0].text }}</li>
+              <li class="list-group-item" *ngIf="comic[0].urls.length > 0 "> URL: <a href="{{ comic[0].urls[0].url }}" target="_blank">{{ comic[0].urls[0].url  }}</a></li>
+              <li class="list-group-item"> <img class="tamañoImage" *ngIf="comic && comic.length > 0 " [src]="comic[0].images[0].path + '.' + comic[0].images[0].extension" alt="Comic Image"></li>  
+      
+              <div *ngFor="let creator of comic[0]?.creators?.items">
+                <li class="list-group-item">{{ creator.role }}: {{ creator.name }}</li>
+              </div>
+            </ul>
+          </mat-panel-description>
+        </mat-expansion-panel>
+      </div>
+      <div class="col-2 mt-4">  <button class="bg-primary"(click)="volver()">Back</button> </div>
+    </div>
+  </div>
+</div>
+
+
+

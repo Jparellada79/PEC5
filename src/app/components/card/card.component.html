@@ -1,0 +1,23 @@
+
+<div class="container-fluid mt-2">
+    <div class="animate__bounceIn" >
+      <h1 >CARDS  CÓMICS</h1>
+    </div>
+    <div class="w-100 d-flex justify-content-center mb-3">
+      <div class="row row-cols-4 g-2 align-items-stretch ">
+        <div *ngFor="let comic of comics"  >
+          <mat-card class="animate__bounceIn" >
+            <mat-card-header>
+              <mat-card-title>id: {{comic.id}}</mat-card-title>
+              <mat-card-subtitle>Title{{comic.title}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions>
+              <button mat-button class="bg-primary" (click)="detallesClick(comic)">DETALLES</button>    
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
